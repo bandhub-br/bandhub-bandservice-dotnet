@@ -40,6 +40,8 @@ O **BandService** é o microsserviço responsável pelo gerenciamento de bandas 
 |-------|----------------|-----------|
 | `5081` | `bands_db` | Gerenciamento de bandas (vinculadas a contas) |
 
+> 🚪 **Acesso externo:** use o [BandHub.Gateway](https://github.com/bandhub-br/bandhub-gateway-dotnet) (porta `5000`) como ponto de entrada — `/bands/**` é roteado automaticamente para este serviço.
+
 ---
 
 ## 🏗 Arquitetura

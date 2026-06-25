@@ -12,7 +12,8 @@ public static class GetBandsEndpoint
             return Results.Ok(response);
         })
         .WithName("GetBands")
-        .WithTags("Bands");
+        .WithTags("Bands")
+        .RequireAuthorization();
         return app;
     }
 }

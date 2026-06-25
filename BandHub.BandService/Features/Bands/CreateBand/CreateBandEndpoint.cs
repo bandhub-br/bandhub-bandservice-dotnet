@@ -26,7 +26,8 @@ public static class CreateBandEndpoint
             }
         })
         .WithName("CreateBand")
-        .WithTags("Bands");
+        .WithTags("Bands")
+        .RequireAuthorization();
         return app;
     }
 }

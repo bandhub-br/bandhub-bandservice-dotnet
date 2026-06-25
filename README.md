@@ -34,6 +34,8 @@
 
 O **BandService** é o microsserviço responsável pelo gerenciamento de bandas do BandHub. Ele provê funcionalidades de criação e listagem de bandas vinculadas a contas, com seu próprio banco de dados isolado.
 
+> 🔐 **Autenticação:** os endpoints protegidos exigem um JWT válido emitido pelo [BandHub.AuthService](https://github.com/bandhub-br/bandhub-authservice-dotnet). Obtenha o token via `POST /auth/login`.
+
 | Porta | Banco de Dados | Descrição |
 |-------|----------------|-----------|
 | `5081` | `bands_db` | Gerenciamento de bandas (vinculadas a contas) |
@@ -72,6 +74,7 @@ Feature/
 | Entity Framework Core | 8.0.24 | ORM / Acesso a dados |
 | Npgsql | 8.0.11 | Provider PostgreSQL para EF Core |
 | PostgreSQL | — | Banco de dados relacional |
+| JwtBearer | 8.0.28 | Validação de tokens JWT emitidos pelo AuthService |
 | Swagger / Swashbuckle | 6.6.2 | Documentação da API |
 | xUnit | 2.5.3 | Framework de testes |
 | Moq | 4.20.72 | Mocking para testes unitários |
